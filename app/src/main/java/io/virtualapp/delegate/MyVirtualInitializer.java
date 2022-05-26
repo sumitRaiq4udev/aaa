@@ -1,9 +1,35 @@
-package io.virtualapp;
+package io.virtualapp.delegate;
+
+import android.app.Application;
 
 import com.lody.virtual.client.core.VirtualCore;
 
-public class MyVirtualInitializer extends VirtualCore.VirtualInitializer {
-    public MyVirtualInitializer(XApp xApp, VirtualCore virtualCore) {
-        super();
+/**
+ * @author weishu
+ * @date 2019/2/25.
+ */
+public class MyVirtualInitializer extends BaseVirtualInitializer {
+    public MyVirtualInitializer(Application application, VirtualCore core) {
+        super(application, core);
+    }
+
+    @Override
+    public void onMainProcess() {
+//        AppCenter.start(application, "bf5e74bd-3795-49bd-95c8-327db494dd11",
+//                Analytics.class, Crashes.class);
+        super.onMainProcess();
+    }
+
+    @Override
+    public void onVirtualProcess() {
+
+        // For Crash statics
+//        AppCenter.start(application, "bf5e74bd-3795-49bd-95c8-327db494dd11",
+//                Analytics.class, Crashes.class);
+
+        super.onVirtualProcess();
+
+        // Override
+        virtualCore.setCrashHandler(new BaseCrashHandler());
     }
 }

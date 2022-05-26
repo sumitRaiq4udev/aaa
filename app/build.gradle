@@ -1,0 +1,80 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "io.virtualapp"
+        minSdk 21
+        targetSdk 30
+        versionCode 1
+        versionName "1.0"
+
+        multiDexEnabled true
+        android {
+            defaultConfig {
+                ndk {
+                    abiFilters "armeabi", "armeabi-v7a", "x86"
+                }
+            }
+        }
+    }
+
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+android {
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.6.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation 'androidx.navigation:navigation-fragment:2.4.2'
+    implementation 'androidx.navigation:navigation-ui:2.4.2'
+
+    //New Virtual App Lib
+    implementation 'com.yanzhenjie.recyclerview:x:1.3.2'
+    //Promise Support
+    implementation 'org.jdeferred:jdeferred-android-aar:1.2.4'
+    // ThirdParty
+    implementation 'com.jonathanfinerty.once:once:1.3.0'
+    implementation 'com.flurry.android:analytics:12.9.0'
+//    implementation 'com.kyleduo.switchbutton:library:1.4.6'
+
+    implementation 'com.kyleduo.switchbutton:library:2.1.0'
+    implementation 'com.android.support:multidex:1.0.3'
+
+    implementation project(':lib')
+
+}

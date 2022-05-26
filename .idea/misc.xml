@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/virtual/newClone/MyApplication/app/src/main/res/layout/activity_clone_app.xml" value="0.1" />
+        <entry key="..\:/virtual/newClone/MyApplication/app/src/main/res/layout/activity_home.xml" value="0.1" />
+        <entry key="..\:/virtual/newClone/MyApplication/app/src/main/res/layout/activity_install.xml" value="0.1" />
+        <entry key="..\:/virtual/newClone/MyApplication/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/virtual/newClone/MyApplication/app/src/main/res/layout/fragment_first.xml" value="0.1" />
+        <entry key="..\:/virtual/newClone/MyApplication/app/src/main/res/layout/fragment_list_app.xml" value="0.626984126984127" />
+        <entry key="..\:/virtual/newClone/MyApplication/app/src/main/res/layout/fragment_second.xml" value="0.12907608695652173" />
+        <entry key="..\:/virtual/newClone/MyApplication/app/src/main/res/layout/item_app.xml" value="0.12907608695652173" />
+        <entry key="..\:/virtual/newClone/MyApplication/lib/src/main/res/drawable/icon_1.xml" value="0.111" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK" />
+</project>
